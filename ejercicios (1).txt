@@ -1,0 +1,436 @@
+1.
+while True:
+    print("--- Bienvenido al menú ---")
+    print("1. Consultar")
+    print("2. Registrar")
+    print("3. Salir")
+
+    respuesta = int(input("Seleccione una opción: "))
+
+    if respuesta == 1:
+        print("Ud seleccionó Consultar")
+    elif respuesta == 2:
+        print("Ud seleccionó Registrar")
+    elif respuesta == 3:
+        print("Ud seleccionó Salir")
+        break
+    else:
+        print("Opción equivocada")
+		
+		
+
+2.
+clave_correcta = 1234
+while True:
+    clave = int(input("Ingrese su contraseña numérica: "))
+
+    if clave == clave_correcta:
+        print("¡Bienvenido al sistema!")
+        break
+    else:
+        print("Clave incorrecta. Intente nuevamente.")
+		
+		
+		
+3.
+clave_correcta = 1234
+intentos = 0
+
+while intentos < 3:
+    clave = int(input("Ingrese su contraseña: "))
+
+    if clave == clave_correcta:
+        print("Acceso concedido")
+        break
+    else:
+        print("Clave incorrecta")
+        intentos = intentos + 1
+
+if intentos == 3:
+    print("Cuenta bloqueada")
+	
+	
+	
+4.
+nota = float(input("Ingrese una nota entre 0.0 y 5.0: "))
+
+while nota < 0.0 or nota > 5.0:
+    print("Nota inválida. Intente nuevamente.")
+    nota = float(input("Ingrese una nota entre 0.0 y 5.0: "))
+
+print("Nota válida. Puede continuar.")
+
+
+
+5.
+respuesta = "S"
+
+while respuesta == "S" or respuesta == "s":
+    print("Procesando solicitud...")
+    print("Operación finalizada.")
+
+    respuesta = input("¿Desea realizar otra operación? (S/N): ")
+
+print("Programa finalizado.")
+
+
+
+6.
+
+documento = input("Ingrese su tipo de documento (CC, TI, CE): ").upper()
+
+while documento != "CC" and documento != "TI" and documento != "CE":
+    print("Tipo de documento inválido.")
+    documento = input("Ingrese CC, TI o CE: ").upper()
+
+print("Tipo de documento válido.")
+
+
+
+
+7.
+numero = 10
+
+while numero >= 1:
+    print(numero)
+    numero = numero - 1
+
+print("¡Tiempo terminado!")
+
+
+
+
+8. 
+velocidad = int(input("Deme la velocidad del vehículo:"))
+
+if velocidad > 120:
+    print("Alerta: Ha superado el límite de velocidad")
+else:
+    print("Velocidad dentro del límite permitido")
+
+
+
+
+9.
+numero = int(input("Ingrese un número entero: "))
+contador = 1
+
+while contador <= 10:
+    resultado = numero * contador
+    print(numero, "x", contador, "=", resultado)
+    contador = contador + 1
+
+
+
+10.
+suma = 0
+cantidad = 0
+
+nota = float(input("Ingrese una nota (-1 para terminar): "))
+
+while nota != -1:
+    suma = suma + nota
+    cantidad = cantidad + 1
+    nota = float(input("Ingrese otra nota (-1 para terminar): "))
+
+if cantidad > 0:
+    promedio = suma / cantidad
+    print("El promedio es:", promedio)
+else:
+    print("No se ingresaron notas.")
+
+
+
+11.
+numero = int(input("Ingrese un número entero no negativo: "))
+factorial = 1
+contador = 1
+
+while contador <= numero:
+    factorial = factorial * contador
+    contador = contador + 1
+
+print("El factorial es:", factorial)
+
+
+
+12.
+numero = 2
+
+while numero <= 20:
+    print(numero)
+    numero = numero + 2
+
+
+
+
+13.
+base = float(input("Ingrese la base: "))
+exponente = int(input("Ingrese el exponente: "))
+
+resultado = 1
+contador = 0
+
+while contador < exponente:
+    resultado = resultado * base
+    contador = contador + 1
+
+print("El resultado es:", resultado)
+
+
+
+14.
+n = int(input("¿Cuántos términos desea mostrar?: "))
+
+a = 0
+b = 1
+contador = 0
+
+while contador < n:
+    print(a)
+    siguiente = a + b
+    a = b
+    b = siguiente
+    contador = contador + 1
+
+
+
+15. 
+numero = 5
+
+while numero <= 50:
+    print(numero)
+    numero = numero + 5
+
+
+
+16. 
+
+stock = 20
+
+while stock > 0:
+    print("Stock disponible:", stock)
+    cantidad = int(input("Cantidad a vender: "))
+
+    if cantidad <= 0:
+        print("Ingrese una cantidad válida")
+    elif cantidad > stock:
+        print("Error: no hay suficientes unidades")
+    else:
+        stock = stock - cantidad
+        print("Venta realizada")
+
+print("Inventario agotado")
+
+
+17.
+
+total = 0
+
+precio = float(input("Ingrese el precio del producto (0 para terminar): "))
+
+while precio != 0:
+    if precio > 0:
+        total = total + precio
+    else:
+        print("Precio no válido")
+
+    precio = float(input("Ingrese el precio del producto (0 para terminar): "))
+
+print("Total a pagar:", total)
+
+
+18. 
+
+saldo = 500000
+
+while saldo > 0:
+    print("Saldo disponible:", saldo)
+    retiro = int(input("Cuánto desea retirar? (0 para salir): "))
+
+    if retiro == 0:
+        break
+    elif retiro < 0:
+        print("Valor no válido")
+    elif retiro > saldo:
+        print("Saldo insuficiente")
+    else:
+        saldo = saldo - retiro
+        print("Retiro realizado")
+
+print("Saldo restante:", saldo)
+
+19. 
+
+personas = 0
+
+while personas < 5:
+    input("Presione Enter para ingresar una persona")
+    personas = personas + 1
+    print("Personas ingresadas:", personas)
+
+print("Aforo completo")
+
+
+20.
+
+deuda = float(input("Ingrese el valor de la deuda: "))
+meses = int(input("Ingrese los meses de mora: "))
+
+contador = 0
+
+while contador < meses:
+    deuda = deuda * 1.05
+    contador = contador + 1
+
+print("Saldo final adeudado:", deuda)
+
+
+21.
+
+presentes = 0
+ausentes = 0
+
+asistencia = input("Ingrese P (Presente), A (Ausente) o F (Fin): ").upper()
+
+while asistencia != "F":
+    if asistencia == "P":
+        presentes = presentes + 1
+    elif asistencia == "A":
+        ausentes = ausentes + 1
+    else:
+        print("Letra no válida")
+
+    asistencia = input("Ingrese P (Presente), A (Ausente) o F (Fin): ").upper()
+
+print("Presentes:", presentes)
+print("Ausentes:", ausentes)
+
+22. 
+
+segundos = 1
+
+while segundos <= 5:
+    print("Segundo transcurrido:", segundos)
+    segundos = segundos + 1
+
+print("Tiempo de espera agotado (Timeout)")
+
+
+23. 
+
+import random
+
+secreto = random.randint(1, 10)
+numero = int(input("Adivina el número entre 1 y 10: "))
+
+while numero != secreto:
+    if numero > secreto:
+        print("El número secreto es menor")
+    else:
+        print("El número secreto es mayor")
+
+    numero = int(input("Intenta de nuevo: "))
+
+print("Felicidades, adivinaste el número")
+
+24. 
+
+numero = int(input("Ingrese un número entero positivo: "))
+
+while numero > 0:
+    digito = numero % 10
+    print(digito)
+    numero = numero // 10
+
+
+25. 
+
+numero = int(input("Ingrese un número entero: "))
+numero = abs(numero)
+
+invertido = 0
+
+while numero > 0:
+    digito = numero % 10
+    invertido = invertido * 10 + digito
+    numero = numero // 10
+
+print("Número invertido:", invertido)
+
+
+26.
+
+numero = int(input("Ingrese un número (0 para terminar): "))
+
+if numero == 0:
+    print("No se ingresaron números")
+else:
+    maximo = numero
+
+    while numero != 0:
+        numero = int(input("Ingrese otro número (0 para terminar): "))
+
+        if numero > maximo:
+            maximo = numero
+
+    print("El número máximo es:", maximo)
+
+
+27. 
+
+import random
+
+dado = 0
+
+while dado != 6:
+    dado = random.randint(1, 6)
+    print("Resultado del dado:", dado)
+
+print("Salió un 6")
+
+
+ 28. 
+
+numero = int(input("Ingrese un número entero positivo: "))
+
+divisores = 0
+contador = 1
+
+while contador <= numero:
+    if numero % contador == 0:
+        divisores = divisores + 1
+
+    contador = contador + 1
+
+if numero > 1 and divisores == 2:
+    print("El número es primo")
+else:
+    print("El número no es primo")
+
+
+ 29. 
+numero = int(input("Ingrese un número entero: "))
+numero = abs(numero)
+
+suma = 0
+
+while numero > 0:
+    digito = numero % 10
+    suma = suma + digito
+    numero = numero // 10
+
+print("La suma de los dígitos es:", suma)
+
+
+ 30. 
+
+numero1 = int(input("Ingrese el primer número positivo: "))
+numero2 = int(input("Ingrese el segundo número positivo: "))
+
+while numero2 != 0:
+    residuo = numero1 % numero2
+    numero1 = numero2
+    numero2 = residuo
+
+print("El MCD es:", numero1)
